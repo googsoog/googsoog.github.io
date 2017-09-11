@@ -1,0 +1,39 @@
+extends ../template
+
+block variables
+  - var title = 'Добро пожаловать'
+
+block content
+    .wrapper
+      .container
+        .hello__bottom
+          a.button.hello__button(href='#') Авторизироваться
+        header.hello
+          .hello__info
+            img.hello__photo(src='assets/pic/img/myfoto.jpg', alt='photo')
+            h1.hello__name Мария Виноградова
+            h2.hello__text Личный сайт веб разработчика
+          .soc
+            ul.soc__list
+              li.soc__item
+                a.soc__link.soc__link--VK(href='https://vk.com/vinmar') VK
+              li.soc__item
+                a.soc__link.soc__link--GH(href='https://github.com/googsoog') GH
+              li.soc__item
+                a.soc__link.soc__link--IN(href='https://www.instagram.com/marigrape/') IN
+        nav.nav
+          ul.nav__list
+            li.nav__item
+              a.nav__link(href='works.html') Мои работы
+            li.nav__item
+              a.nav__link(href='about.html') Обо мне
+            li.nav__item
+              a.nav__link(href='blog.html') Блог
+        include ../common/author-form.pug
+          nav.nav
+            ul.nav__list
+              li.nav__item
+                a.nav__link(href='index.html') На галавную страницу
+              li.nav__item
+                a.nav__link(href='about.html') Войти
+    include ../common/footer.pug

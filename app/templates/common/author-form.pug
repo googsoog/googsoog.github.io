@@ -1,0 +1,15 @@
+.author
+  h1.author__caption АВТОРИЗИРУЙТИСЬ
+  form.form(action='#', method='get', enctype='multipart/form-data')
+    input(type='text', placeholder='Логин')
+    input(type='password', placeholder='Пароль')
+    label
+      input(type='checkbox')
+      | Я человек
+    h3.author__question Вы точно не робот?
+    label
+      input(type='radio', name='human', value='sure', checked='')
+      | Да
+    label
+      input(type='radio', name='human', value='notsure')
+      | Не уверен
