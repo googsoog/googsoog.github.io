@@ -1,0 +1,6 @@
+ul.socials
+        each item in [{name: 'vk', link: 'https://vk.com/vinmar'}, {name: 'github', link: 'https://github.com/googsoog'}, {name: 'in',link: 'https://www.instagram.com/marigrape/'}]
+          li.socials__item
+            a(href=`${item.link}` class=`socials__link socials__link--${item.name}`)
+              svg(class=`socials__icon socials__icon--${item.name}`)
+                use(xlink:href=`assets/img/sprite.svg#${item.name}`)

@@ -1,0 +1,283 @@
+        .container-welcome {
+            min-height: 650px;
+            color: $white;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/bg_welcom.jpg);
+            background-position: 50% 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hello {
+            height: 100%;
+            flex-grow: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hello__container {
+            width: 100%;
+            position: relative;
+        }
+        
+        .welcome-button {
+            position: absolute;
+            top: 24px;
+            right: 100px;
+        }
+        
+        .welcome-button__link {
+            line-height: 40px;
+            display: block;
+            text-align: center;
+            width: 178px;
+            border: 1px solid #fff;
+            height: 43px;
+        }
+        
+        .header {
+            //opacity: 0;
+            background-color: rgba(28, 31, 41, 0.5);
+            width: 380px;
+            height: 395px;
+        }
+        
+        .header__container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 10px 0;
+        }
+        
+        .header__info {
+            flex-grow: 1;
+            width: 100%;
+        }
+        
+        .header__text {
+            opacity: 0.8;
+            line-height: 1.5;
+            margin-bottom: 31px;
+        }
+        
+        .header .socials {
+            width: 100%;
+            margin-bottom: 41px;
+            //padding-left: 32px;
+        }
+        
+        .header .socials__icon {
+            fill: #0a44aa;
+            &:hover {
+                fill: #004cd1;
+            }
+        }
+        
+        .header__photo {
+            opacity: 1;
+            margin-bottom: 5px;
+        }
+        
+        .welcome-title {
+            font-size: 28px;
+            font-family: $sansus;
+        }
+        
+        .header__text {
+            font-size: 16px;
+        }
+        
+        .header__nav {
+            width: 100%;
+        }
+        
+        .footer-welcome {
+            font-family: $light;
+            max-height: 56px;
+            background-color: transparent;
+        }
+        
+        //form
+        .author {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(28, 31, 41, 0.5);
+            width: 380px;
+            height: 395px;
+            display: none;
+        }
+        
+        .author__container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 35px 20px 0;
+            height: 360px;
+        }
+        
+        .form__title {
+            margin-bottom: 32px;
+            font-family: $sansus;
+            font-size: 35px;
+            line-height: 1.1;
+        }
+        
+        .form {
+            height: 100%;
+            width: 100%;
+            flex-grow: 1;
+        }
+        
+        .form__block-input {
+            color: #c4c9cd;
+            width: 100%;
+            height: 45px;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .form__input {
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+        
+        .form__pic {
+            display: flex;
+            width: 45px;
+            height: 45px;
+            background-color: #f0efea;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        //checkbox-radio
+        .form__block-text {
+            width: 100%;
+            padding: 0 73px;
+        }
+        
+        .check-hide,
+        .radio-hide {
+            position: absolute;
+            left: -99999px;
+        }
+        
+        .check {
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 2px;
+            width: 19px;
+            height: 18px;
+            background-color: $white;
+            position: relative;
+        }
+        
+        .check-hide:checked+.check {
+            background-color: #0548be;
+            border: none;
+        }
+        
+        .form__check-icon {
+            height: 9px;
+            width: 11px;
+            background-image: url(../img/bg_svg/check.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .radio {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: $white;
+            position: relative;
+        }
+        
+        .radio:after {
+            content: '';
+            display: block;
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            background-color: #0548be;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s;
+        }
+        
+        .radio-hide:checked+.radio:after {
+            width: 8px;
+            height: 8px;
+        }
+        
+        .form__question,
+        .form__text {
+            opacity: 0.8;
+        }
+        
+        .form__radio,
+        .form__check {
+            margin-right: 10px;
+        }
+        
+        //label-form
+        .form__label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .form__answer {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .form__label--no,
+        .form__label--yes {
+            width: 50%;
+            flex-basis: 50px;
+        }
+        
+        .form__label--no {
+            flex-grow: 1;
+        }
+        
+        .form__question {
+            font-family: $medium;
+            margin-bottom: 5px;
+        }
+        
+        //nav-form
+        .author .nav,
+        header .nav {
+            height: 45px;
+            width: 100%;
+            font-family: $medium;
+             :last-child {
+                border-right: none;
+            }
+        }
+        
+        .author .nav__item,
+        .header .nav__item {
+            background-color: #0548be;
+            border-right: 2px solid #7296d3;
+            &:hover {
+                background-color: #083c96;
+            }
+        }

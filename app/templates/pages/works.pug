@@ -1,7 +1,89 @@
 extends ../template
-
+include ../common/_mixins.pug
 block variables
-  - var title = 'Мои работы'
+  - var title = 'Обо мне'
 
 block content
-  h1 Мои работы
+  .wrapper
+    .maincontent
+      section.section.hero.header-bg
+          .hero__socials
+            include ../common/soc.pug
+          .hero__title.head-star.head-work
+            .user.hero__user
+              .user__pic
+                img.user__pic-img.my-foto(src='assets/img/myfoto.jpg', alt='photo')
+              .user__description
+                .user__name Мария Виноградова
+                .user__info Личный сайт разработчика
+          .hamburger.hero__menu
+            svg.hamburger__icon
+              use(xlink:href="assets/img/sprite.svg#hamburger")
+          .arrow-down.work-scroll
+            a.hero__scroll-link(href="#")
+              svg.hero__scroll-icon
+                use(xlink:href="assets/img/sprite.svg#arrow_down")
+      section.section.works
+          .works-triangle
+            .works-title.title-page
+                .block-title МОИ РАБОТЫ
+          .works__content
+            .works__left
+              .works__left-container
+                .block-subtitle.works__subtitle CАЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+                .works__text HTML , CSS, JAVASCRIPT
+                .works__button
+                  a.works__button-link(href='#')
+                    i(class="fa fa-link" aria-hidden="true")
+                    span.works__link-text Посмотреть сайт
+            .works__right
+              .works__right-container
+                .works__list
+                  .works__item.works__item--big
+                    a.works__link.works__link--active(href='#')
+                      .works__img.works__img--loftscool
+                  .works__item
+                    a.works__link(href='#')
+                      .works__img.works__img--yoga
+                  .works__item
+                    a.works__link(href='#')
+                      .works__img.works__img--it
+                  .works__item
+                    a.works__link(href='#')
+                      .works__img.works__img--portal
+      section.section.contact-me
+        .info
+          .info__container
+            .info__top
+              .info__title.title-page
+                  .block-title
+                    | ЧТО ОБО МНЕ
+                    br
+                    | ГОВОРЯТ
+              .info__content
+                 article.article-me
+                  .article-me__foto.article-me__foto--left
+                  .article-me__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  .article-me__name Ковальчук Дмитрий
+                  .article-me__post — основатель Loftschool
+                 article.article-me
+                  .article-me__foto.article-me__foto--right
+                  .article-me__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                  .article-me__name Сабанцев Владимир
+                  .article-me__post — преподаватель
+            .info__bottom        
+              form.info__form.form-contact(action='#', method='get', enctype='multipart/form-data')
+                .form-contact__container
+                  .form-contact__top
+                    .block-subtitle.form-contact__subtitle CВЯЗАТЬСЯ СО МНОЙ
+                    input.form-contact__input.input(type='text', placeholder='Ваше имя')
+                    input.form-contact__input.input(type='email', placeholder='Ваш email')
+                    textarea.form-contact__text(name="", cols="30", rows="10" placeholder='Ваше сообщение')
+                  .form-contact__bottom
+                    input.form-contact__button(type="submit" id='submit' value="Отправить")
+                    input.form-contact__button(type="reset" id='reset' value="Очистить")
+              .arrow-down.info__scroll
+                a.info__scroll-link(href="#")
+                  svg.info__scroll-icon
+                    use(xlink:href="assets/img/sprite.svg#arrow_down")      
+          include ../common/footer.pug

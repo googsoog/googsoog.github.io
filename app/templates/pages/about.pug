@@ -1,7 +1,78 @@
 extends ../template
-
+include ../common/_mixins.pug
 block variables
   - var title = 'Обо мне'
 
 block content
-  h1 Обо мне
+  .wrapper
+    .maincontent
+      section.section.hero.header-bg
+          .hero__socials
+            include ../common/soc.pug
+          .hero__title.head-star
+            .user.hero__user
+              .user__pic
+                img.user__pic-img.my-foto(src='assets/img/myfoto.jpg', alt='photo')
+              .user__description
+                .user__name Мария Виноградова
+                .user__info Личный сайт разработчика
+          .hamburger.hero__menu
+            svg.hamburger__icon
+              use(xlink:href="assets/img/sprite.svg#hamburger")
+          .arrow-down.hero__scroll
+            a.hero__scroll-link(href="#")
+              svg.hero__scroll-icon
+                use(xlink:href="assets/img/sprite.svg#arrow_down")
+      section.section.about
+          .about__left
+            .triangle.tringle_fill_white.about__left-triangle
+              svg.about__left-poligon.poligon(width="900" height="180")
+                polygon(points="0,0 900,160 900,180 0,180" class="about__left-poli")
+            .about__left-container
+              .about__left-title.title-page
+                .block-title ОБО МНЕ
+              .about__left-content
+                .user-description
+                  .user-description__image
+                  .user-description__title
+                    .block-subtitle КТО Я
+                  .user-description__text.text-content
+                    p Я веб разработчик из Новосибирска. Мне 27 лет. 
+                    | Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .about__right
+            .triangle.tringle_fill_beige.about__right-triangle
+              svg.about__right-poligon.poligon(width="900" height="180")
+                polygon(points="0,160 900,0 900,180 0,180" class="about__right-poli")
+            .about__right-container      
+              .about__right-title
+                .block-subtitle ЧЕМ Я МОГУ БЫТЬ 
+                  br
+                  | ВАМ ПОЛЕЗЕН
+              .about__right-text.text-content
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+              .about__right-content
+                - var item = ['Frontend', 'Backend', 'WorkFlow'];
+                ul.skills-list
+                  - for (var i=0; i<item.length; i++) {
+                  li.skills-list__item
+                      .skills-row
+                        .skills-row__title=item[i]
+                        - var skill = [['HTML5', 'CSS3', 'JavaScript'], ['PHP', 'MySQL', 'Node.js', 'Mongo.db'], ['Git', 'Gulp', 'Bower']];
+                        ul.skills-row__list
+                          - for (var j=0; j<skill[i].length; j++) {
+                          li.skills-row__item
+                            .skill
+                              svg.circl(viewbox='0 0 110 110' width="120" height="120")
+                                circle.circl__first(r='45', cx='50%', cy='50%', fill='none')
+                                circle(class=`circl__second circl__second--${skill[i][j].slice(0, 4)}` r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                              .skill__title= skill[i][j]
+                          -}
+                  - }
+      section.section.map
+        .google-map
+          .map__container
+            .map__contacts
+              include ../common/contacts.pug
+          include ../common/footer.pug

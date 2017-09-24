@@ -1,15 +1,31 @@
 .author
-  h1.author__caption АВТОРИЗИРУЙТИСЬ
-  form.form(action='#', method='get', enctype='multipart/form-data')
-    input(type='text', placeholder='Логин')
-    input(type='password', placeholder='Пароль')
-    label
-      input(type='checkbox')
-      | Я человек
-    h3.author__question Вы точно не робот?
-    label
-      input(type='radio', name='human', value='sure', checked='')
-      | Да
-    label
-      input(type='radio', name='human', value='notsure')
-      | Не уверен
+  .author__container
+    form.form(action='#', method='get', enctype='multipart/form-data')
+      h1.form__title АВТОРИЗИРУЙТЕСЬ
+      .form__block-input
+        .form__pic
+          <i class="fa fa-user" aria-hidden="true"></i>
+        input.form__input.form__input--login.input(type='text', placeholder='Логин')
+      .form__block-input
+        .form__pic
+          <i class="fa fa-key" aria-hidden="true"></i>
+        input.form__input.form__input--pass.input(type='password', placeholder='Пароль')
+      .form__block-text
+        label.label.form__label
+          input.check-hide.form__check-hide(type='checkbox')
+          .check.form__check
+            .form__check-icon
+          span.form__text Я человек
+        .form__question Вы точно не робот?
+        .form__answer
+          label.label.form__label.form__label--yes
+            input.radio-hide.form__radio-hide(type='radio', name='human', value='sure', checked='')
+            .radio.form__radio.form__radio--yes
+              .form__radio-icon
+            span.form__text Да
+          label.label.form__label.form__label--no
+            input.radio-hide.form__radio-hide(type='radio', name='human', value='notsure')
+            .radio.form__radio.form__radio--no
+              .form__radio-icon
+            span.form__text Не уверен
+  +menu("nav", [{name: "На главную", link: "index.html"}, {name: "Войти", link: "about.html"}])

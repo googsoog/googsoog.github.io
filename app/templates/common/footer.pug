@@ -1,3 +1,17 @@
-footer.footer
-      .container
-        h3 © Мария Виноградова | создано с любовью в Loftschool | 2017
+footer.map__footer.footer
+  .footer-top
+    .footer-info
+      p Этот сайт сделан в рамках обучения в Школе
+      | онлайн образования Loftschool
+    .footer-nav
+      include ../common/_mixins.pug
+      +menu("nav", [{name: "Мои работы", link: "works.html"}, {name: "Обо мне", link: "about.html"}, {name: "Блог", link: "blog.html"}, {name: "Авторизация", link: "index.html"}])
+      include ../common/soc.pug
+    .footer-contact
+      ul.footer-contact__list
+        li.footer-contact__item marigrape
+        li.footer-contact__item +7 926 388 81 88
+        li.footer-contact__item vinmar@ya.ru
+        li.footer-contact__item г. Новосибирск, ул. Инская д.4
+  .footer-bottom
+    p © Мария Виноградова | создано с любовью в Loftschool | 2017

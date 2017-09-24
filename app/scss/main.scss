@@ -1,5 +1,29 @@
-body {
-    background-color: #223b65;
-    font-size: 18px;
-    color: white;
-}
+$grey: #474b57;
+$orangeLight: #f08c33;
+$orange: #e45028;
+$orangeDark: #e35028;
+$yellow: #f9b43b;
+$green: #8ac03e;
+$white: #fff;
+//fonts
+$bold: 'robotobold';
+$boldItal: 'robotobold_italic';
+$italic: 'robotoitalic';
+$light: 'robotolight';
+$lightItal: 'robotolight_italic';
+$medium: 'robotomedium';
+$mediumItal: 'robotomedium_italic';
+$regular: 'robotoregular';
+$sansus: 'sansus_webissimoregular';
+@import "layout/normalize";
+@import "layout/font-awesome";
+@import "layout/Fonts";
+@import "layout/adjusment";
+@import "layout/header";
+@import "layout/section";
+@import "layout/content";
+@import "layout/footer";
+@import "sections/index";
+@import "sections/about";
+@import "sections/blog";
+@import "sections/works";

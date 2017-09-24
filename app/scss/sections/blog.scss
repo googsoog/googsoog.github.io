@@ -1,0 +1,138 @@
+    .wrapper-blog {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+    }
+    
+    .head-blog {
+        position: relative;
+        padding: 30px 30px;
+        max-height: 400px;
+    }
+    
+    .content-blog {
+        width: 100%;
+        //height: 100%;
+        flex-grow: 1;
+    }
+    
+    .head-blog__socials .socials {
+        justify-content: flex-start;
+    }
+    
+    .user-blog {
+        top: 33%;
+        transform: translate(-50%, -50%);
+        color: $white;
+    }
+    
+    .user-blog__pic {
+        margin-bottom: 18px;
+    }
+    
+    .user-blog__title {
+        margin-bottom: 10px;
+    }
+    
+    .user-blog__container {
+        text-align: center;
+    }
+    
+    .section-blog {
+        //transform: translateY(-220px);
+        height: 100vh;
+        min-height: 870px;
+        height: 100%;
+        background-color: #faf8f0;
+    }
+    
+    .blog-triangle__icon {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .blog {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding-bottom: 60px;
+    }
+    
+    .blog__left {
+        width: 22%;
+        height: 100%;
+        padding-left: 120px;
+    }
+    
+    .blog-menu__list {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    
+    .blog-menu__item {
+        padding-right: 17px;
+        min-height: 42px;
+        margin-bottom: 10px;
+    }
+    
+    .blog-menu__link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        text-align: right;
+        line-height: 1.6;
+    }
+    
+    .blog-menu__item--active {
+        border-right: 3px solid #0548be;
+        color: #083c96;
+        font-family: $bold;
+    }
+    
+    .blog__right {
+        padding: 0 410px 0 115px;
+        width: 78%;
+        height: 100%;
+    }
+    
+    .blog__right-container {
+        max-height: 1060px;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+    
+    .article {
+        border-bottom: 5px solid #ecebe4;
+        padding-bottom: 70px;
+        margin-bottom: 70px;
+    }
+    
+    .article__title {
+        font-size: 35px;
+        font-family: $sansus;
+        margin-bottom: 13px;
+        line-height: 1;
+    }
+    
+    .article__data {
+        color: #083c96;
+        margin-bottom: 20px;
+    }
+    
+    .article__text {
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+    
+    .article__text p {
+        margin-bottom: 13px;
+    }
+    
+    .article__text:last-child {
+        margin-bottom: 0;
+    }

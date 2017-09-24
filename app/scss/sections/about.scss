@@ -1,0 +1,239 @@
+.hero {
+    position: relative;
+    padding: 30px 30px;
+}
+
+.hero__socials .socials {
+    justify-content: flex-start;
+}
+
+.user__pic {
+    text-align: center;
+}
+
+.user__description {
+    text-align: center;
+}
+
+.hero__scroll {
+    bottom: 70px;
+    left: 50%;
+}
+
+.hero__scroll-icon {
+    width: 26px;
+    height: 17px;
+    fill: #bdc5d3;
+    &:hover {
+        fill: $white;
+    }
+}
+
+//about
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about__left,
+.about__right {
+    height: 100%;
+    width: 50%;
+}
+
+.about__left-triangle,
+.about__right-triangle {
+    width: 100%;
+    height: 180px;
+    background-color: transparent;
+}
+
+.poligon {
+    min-width: 900px;
+    height: 100%;
+}
+
+.about__right-poligon {
+    fill: #eae8e2;
+}
+
+.about__right-container {
+    height: 100%;
+    padding-left: 35px;
+    background-color: #eae8e2;
+}
+
+//left 
+.about__left-poligon {
+    fill: #f2f0e8;
+}
+
+.about__left-container {
+    height: 100%;
+    padding: 0 21px 0 80px;
+    background-color: #f2f0e8;
+    display: flex;
+}
+
+.about__left-title {
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+.about__left-title .block-title {
+    padding-left: 38px;
+    line-height: 50px;
+}
+
+.about__left-content {
+    width: 50%;
+    height: 100%;
+}
+
+.user-description__image {
+    background-image: url('../img/photo-about.jpg');
+    background-position: 80% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 445px;
+    height: 390px;
+    margin-bottom: 30px;
+}
+
+.user-description__title {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+//right
+.about__right-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about__right-text {
+    margin-bottom: 48px;
+}
+
+.skills-list {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.skills-list__item {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skill-row {
+    width: 100%;
+}
+
+.skills-row__list {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.skills-row__item {
+    width: 120px;
+    height: 120px;
+    margin-right: 40px;
+}
+
+.skills-row__title {
+    margin-bottom: 12px;
+    font-family: $medium;
+    font-size: 28px;
+}
+
+.skill {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.skill__title {
+    color: #1056d1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 120px;
+    font-size: 14px;
+}
+
+.circl {
+    fill: none;
+    stroke-width: 20;
+}
+
+.circl__first {
+    stroke: #dfdcd5;
+}
+
+.circl__second {
+    stroke: #1056d1;
+    stroke-dasharray: .0010 282.6;
+    transition: all 1s;
+}
+
+.circl__second--HTML {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--CSS3 {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--Java {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--PHP {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--MySQ {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--Node {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--Mong {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--Git {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--Gulp {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circl__second--Bowe {
+    stroke-dasharray: 70.65 282.6;
+}
+
+//map
+.google-map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.map__container {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

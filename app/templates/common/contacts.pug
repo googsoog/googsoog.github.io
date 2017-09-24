@@ -1,0 +1,18 @@
+.contacts
+  .contacts__title
+    .block-subtitle КОНТАКТЫ
+  ul.contacts__list
+    - 
+      var contacts = [
+        ['skype_n', 'marigrape'],
+        ['envelope_n', 'vinmar@ya.ru'],
+        ['phone_n', '+7 926 388 81 88'],
+        ['map_n', 'Новосибирск, ул. Инская, д.4'],
+      ]
+    each contact in contacts
+      li.contacts__item
+        .contacts-row
+          .contacts-row__icon 
+            svg.contacts-row__svg(width="45" height="45")
+                use(xlink:href=`assets/img/sprite.svg#${contact[0]}`)
+          .contacts-row__content #{contact[1]}
