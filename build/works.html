@@ -8,46 +8,48 @@
     <meta name="viewport" content="width=1800">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/css/main.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <script src="assets/js/bundle.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="maincontent">
-        <section class="section hero header-bg">
-          <div class="hero__socials">
-            <ul class="socials">
-              <li class="socials__item"><a class="socials__link socials__link--vk" href="https://vk.com/vinmar">
-                  <svg class="socials__icon socials__icon--vk">
-                    <use xlink:href="assets/img/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__link--github" href="https://github.com/googsoog">
-                  <svg class="socials__icon socials__icon--github">
-                    <use xlink:href="assets/img/sprite.svg#github"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__link--in" href="https://www.instagram.com/marigrape/">
-                  <svg class="socials__icon socials__icon--in">
-                    <use xlink:href="assets/img/sprite.svg#in"></use>
-                  </svg></a></li>
-            </ul>
-          </div>
-          <div class="hero__title head-star head-work">
-            <div class="user hero__user">
-              <div class="user__pic"><img class="user__pic-img my-foto" src="assets/img/myfoto.jpg" alt="photo"></div>
-              <div class="user__description">
-                <div class="user__name">Мария Виноградова</div>
-                <div class="user__info">Личный сайт разработчика</div>
+        <section class="section hero hero-works">
+          <div class="hero-container">
+            <div class="hero__socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link socials__link--vk" href="https://vk.com/vinmar">
+                    <svg class="socials__icon socials__icon--vk">
+                      <use xlink:href="assets/img/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link socials__link--github" href="https://github.com/googsoog">
+                    <svg class="socials__icon socials__icon--github">
+                      <use xlink:href="assets/img/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link socials__link--in" href="https://www.instagram.com/marigrape/">
+                    <svg class="socials__icon socials__icon--in">
+                      <use xlink:href="assets/img/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="hero__title head-star head-work">
+              <div class="user hero__user">
+                <div class="user__pic"><img class="user__pic-img my-foto" src="assets/img/myfoto.jpg" alt="photo"></div>
+                <div class="user__description">
+                  <div class="user__name">Мария Виноградова</div>
+                  <div class="user__info">Личный сайт разработчика</div>
+                </div>
               </div>
             </div>
+            <div class="hamburger hero__menu">
+              <svg class="hamburger__icon">
+                <use xlink:href="assets/img/sprite.svg#hamburger"></use>
+              </svg>
+            </div>
+            <div class="arrow-down work-scroll"><a class="hero__scroll-link" href="#">
+                <svg class="hero__scroll-icon">
+                  <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
+                </svg></a></div>
           </div>
-          <div class="hamburger hero__menu">
-            <svg class="hamburger__icon">
-              <use xlink:href="assets/img/sprite.svg#hamburger"></use>
-            </svg>
-          </div>
-          <div class="arrow-down work-scroll"><a class="hero__scroll-link" href="#">
-              <svg class="hero__scroll-icon">
-                <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
-              </svg></a></div>
         </section>
         <section class="section works">
           <div class="works-triangle">
@@ -58,22 +60,45 @@
           <div class="works__content">
             <div class="works__left">
               <div class="works__left-container">
-                <div class="block-subtitle works__subtitle">CАЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ</div>
+                <div class="block-subtitle works__subtitle">CАЙТ ШКОЛЫ ОНЛАЙН<br>ОБРАЗОВАНИЯ</div>
                 <div class="works__text">HTML , CSS, JAVASCRIPT</div>
                 <div class="works__button"><a class="works__button-link" href="#"><i class="fa fa-link" aria-hidden="true"></i><span class="works__link-text">Посмотреть сайт</span></a></div>
               </div>
             </div>
             <div class="works__right">
-              <div class="works__right-container">
-                <div class="works__list">
-                  <div class="works__item works__item--big"><a class="works__link works__link--active" href="#">
-                      <div class="works__img works__img--loftscool"></div></a></div>
-                  <div class="works__item"><a class="works__link" href="#">
-                      <div class="works__img works__img--yoga"></div></a></div>
-                  <div class="works__item"><a class="works__link" href="#">
-                      <div class="works__img works__img--it"></div></a></div>
-                  <div class="works__item"><a class="works__link" href="#">
-                      <div class="works__img works__img--portal"></div></a></div>
+              <div class="sleder">
+                <div class="sleder__top">
+                  <div class="sleder__bg"><a class="slider__link" href="#"></a></div>
+                </div>
+                <div class="sleder__bottom">
+                  <div class="sleder__left">
+                    <div class="sleder__left-container">
+                      <ul class="sleder__list">
+                        <li class="slider__item slider__item--loftscool"></li>
+                        <li class="slider__item slider__item--yoga"></li>
+                        <li class="slider__item slider__item--it"></li>
+                        <li class="slider__item slider__item--portal"></li>
+                      </ul>
+                    </div>
+                    <div class="slider__scroll"><a class="slider__scroll-link" href="#">
+                        <svg class="slider__scroll-icon">
+                          <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                        </svg></a></div>
+                  </div>
+                  <div class="slider__right">
+                    <div class="sleder__right-container">
+                      <ul class="sleder__list">
+                        <li class="slider__item slider__item--portal"></li>
+                        <li class="slider__item slider__item--it"></li>
+                        <li class="slider__item slider__item--yoga"></li>
+                        <li class="slider__item slider__item--loftscool"></li>
+                      </ul>
+                    </div>
+                    <div class="slider__scroll"><a class="slider__scroll-link" href="#">
+                        <svg class="slider__scroll-icon">
+                          <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+                        </svg></a></div>
+                  </div>
                 </div>
               </div>
             </div>

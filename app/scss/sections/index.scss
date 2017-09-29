@@ -2,15 +2,49 @@
             min-height: 650px;
             color: $white;
             width: 100%;
-            height: 100%;
-            background-image: url(../img/bg_welcom.jpg);
-            background-position: 50% 50%;
-            background-size: cover;
-            background-repeat: no-repeat;
+            height: 100vh;
+            background-color: #223b65;
             display: flex;
             flex-flow: column;
             align-items: center;
             position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        .paralax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 3;
+            background-color: transparent;
+        }
+        
+        .paralax__layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .paralax__img {
+            position: absolute;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 2000px;
         }
         
         .hello {
@@ -20,11 +54,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 4;
         }
         
         .hello__container {
             width: 100%;
+            perspective: 1000px;
+            /*
+            &:hover .header__rotate {
+                transform: rotateY(180deg);
+            }*/
+        }
+        
+        .header__rotate {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
             position: relative;
+            transition: 1s;
+            backface-visibility: hidden;
         }
         
         .welcome-button {
@@ -34,19 +82,25 @@
         }
         
         .welcome-button__link {
+            z-index: 50;
             line-height: 40px;
             display: block;
             text-align: center;
             width: 178px;
             border: 1px solid #fff;
             height: 43px;
+            &:hover {
+                background-color: #083c96;
+                border: none;
+            }
         }
         
         .header {
-            //opacity: 0;
             background-color: rgba(28, 31, 41, 0.5);
             width: 380px;
             height: 395px;
+            z-index: 30;
+            //backface-visibility: hidden;
         }
         
         .header__container {
@@ -58,18 +112,18 @@
         .header__info {
             flex-grow: 1;
             width: 100%;
+            margin-bottom: 31px;
         }
         
         .header__text {
             opacity: 0.8;
             line-height: 1.5;
-            margin-bottom: 31px;
+            font-size: 16px;
         }
         
         .header .socials {
             width: 100%;
             margin-bottom: 41px;
-            //padding-left: 32px;
         }
         
         .header .socials__icon {
@@ -87,10 +141,6 @@
         .welcome-title {
             font-size: 28px;
             font-family: $sansus;
-        }
-        
-        .header__text {
-            font-size: 16px;
         }
         
         .header__nav {
@@ -111,7 +161,10 @@
             background-color: rgba(28, 31, 41, 0.5);
             width: 380px;
             height: 395px;
+            z-index: 20;
+            transform: rotateY(180deg);
             display: none;
+            // opacity: 0;
         }
         
         .author__container {
@@ -119,7 +172,7 @@
             display: flex;
             flex-wrap: wrap;
             padding: 35px 20px 0;
-            height: 360px;
+            height: 349px;
         }
         
         .form__title {

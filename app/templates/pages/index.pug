@@ -6,19 +6,25 @@ block variables
 block content
     .wrapper
       .container-welcome
+        video(class="video" width="100%" height="auto" autoplay="autoplay" loop="loop")
+          source(src="assets/img/night.mp4" type="video/mp4")
+        .paralax(id='paralax')
+          .paralax__layer(id='layerParalax')
+            img.paralax__img#img-paralax(src="assets/img/mount.png" width='5760')
         .hello
           .welcome-button
-              a.button.welcome-button__link(href='#') Авторизироваться
+              a.button.welcome-button__link(href='#' id="button") Авторизироваться
           .hello__container
-            header.header
-              .header__container
-                .header__info
-                  img.header__photo.my-foto(src='assets/img/myfoto.jpg', alt='photo')
-                  h1.header__name.welcome-title Мария Виноградова
-                  h2.header__text Личный сайт веб разработчика
-                include ../common/soc.pug
-              .header__nav
-                +menu("nav", [{name: "Мои работы", link: "works.html"}, {name: "Обо мне", link: "about.html"}, {name: "Блог", link: "blog.html"}])
-            include ../common/author-form.pug
+            .header__rotate
+              header.header#header
+                .header__container
+                  .header__info
+                    img.header__photo.my-foto(src='assets/img/myfoto.jpg', alt='photo')
+                    h1.header__name.welcome-title Мария Виноградова
+                    h2.header__text Личный сайт веб разработчика
+                  include ../common/soc.pug
+                .header__nav
+                  +menu("nav", [{name: "Мои работы", link: "works.html"}, {name: "Обо мне", link: "about.html"}, {name: "Блог", link: "blog.html"}])
+              include ../common/author-form.pug
         div.footer-welcome
           p © Мария Виноградова | создано с любовью в Loftschool | 2017

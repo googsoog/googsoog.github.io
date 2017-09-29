@@ -8,88 +8,96 @@
     <meta name="viewport" content="width=1800">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/css/main.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <script src="assets/js/bundle.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="container-welcome">
+        <video class="video" width="100%" height="auto" autoplay="autoplay" loop="loop">
+          <source src="assets/img/night.mp4" type="video/mp4">
+        </video>
+        <div class="paralax" id="paralax">
+          <div class="paralax__layer" id="layerParalax"><img class="paralax__img" id="img-paralax" src="assets/img/mount.png" width="5760"></div>
+        </div>
         <div class="hello">
-          <div class="welcome-button"><a class="button welcome-button__link" href="#">Авторизироваться</a></div>
+          <div class="welcome-button"><a class="button welcome-button__link" href="#" id="button">Авторизироваться</a></div>
           <div class="hello__container">
-            <header class="header">
-              <div class="header__container">
-                <div class="header__info"><img class="header__photo my-foto" src="assets/img/myfoto.jpg" alt="photo">
-                  <h1 class="header__name welcome-title">Мария Виноградова</h1>
-                  <h2 class="header__text">Личный сайт веб разработчика</h2>
+            <div class="header__rotate">
+              <header class="header" id="header">
+                <div class="header__container">
+                  <div class="header__info"><img class="header__photo my-foto" src="assets/img/myfoto.jpg" alt="photo">
+                    <h1 class="header__name welcome-title">Мария Виноградова</h1>
+                    <h2 class="header__text">Личный сайт веб разработчика</h2>
+                  </div>
+                  <ul class="socials">
+                    <li class="socials__item"><a class="socials__link socials__link--vk" href="https://vk.com/vinmar">
+                        <svg class="socials__icon socials__icon--vk">
+                          <use xlink:href="assets/img/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link socials__link--github" href="https://github.com/googsoog">
+                        <svg class="socials__icon socials__icon--github">
+                          <use xlink:href="assets/img/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link socials__link--in" href="https://www.instagram.com/marigrape/">
+                        <svg class="socials__icon socials__icon--in">
+                          <use xlink:href="assets/img/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
                 </div>
-                <ul class="socials">
-                  <li class="socials__item"><a class="socials__link socials__link--vk" href="https://vk.com/vinmar">
-                      <svg class="socials__icon socials__icon--vk">
-                        <use xlink:href="assets/img/sprite.svg#vk"></use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link socials__link--github" href="https://github.com/googsoog">
-                      <svg class="socials__icon socials__icon--github">
-                        <use xlink:href="assets/img/sprite.svg#github"></use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link socials__link--in" href="https://www.instagram.com/marigrape/">
-                      <svg class="socials__icon socials__icon--in">
-                        <use xlink:href="assets/img/sprite.svg#in"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-              <div class="header__nav">
+                <div class="header__nav">
+                  <nav class="nav">
+                    <ul class="nav__list">
+                      <li class="nav__item"><a class="nav__link" href="works.html">Мои работы</a></li>
+                      <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                      <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </header>
+              <div class="author" id="author">
+                <div class="author__container">
+                  <form class="form" action="#" method="get" enctype="multipart/form-data">
+                    <h1 class="form__title">АВТОРИЗИРУЙТЕСЬ</h1>
+                    <div class="form__block-input">
+                      <div class="form__pic"><i class="fa fa-user" aria-hidden="true"></i></div>
+                      <input class="form__input form__input--login input" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form__block-input">
+                      <div class="form__pic"><i class="fa fa-key" aria-hidden="true"></i></div>
+                      <input class="form__input form__input--pass input" type="password" placeholder="Пароль">
+                    </div>
+                    <div class="form__block-text">
+                      <label class="label form__label">
+                        <input class="check-hide form__check-hide" type="checkbox">
+                        <div class="check form__check">
+                          <div class="form__check-icon"></div>
+                        </div><span class="form__text">Я человек</span>
+                      </label>
+                      <div class="form__question">Вы точно не робот?</div>
+                      <div class="form__answer">
+                        <label class="label form__label form__label--yes">
+                          <input class="radio-hide form__radio-hide" type="radio" name="human" value="sure" checked="">
+                          <div class="radio form__radio form__radio--yes">
+                            <div class="form__radio-icon"></div>
+                          </div><span class="form__text">Да</span>
+                        </label>
+                        <label class="label form__label form__label--no">
+                          <input class="radio-hide form__radio-hide" type="radio" name="human" value="notsure">
+                          <div class="radio form__radio form__radio--no">
+                            <div class="form__radio-icon"></div>
+                          </div><span class="form__text">Не уверен</span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
                 <nav class="nav">
                   <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="works.html">Мои работы</a></li>
-                    <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
-                    <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html">На главную</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">Войти</a></li>
                   </ul>
                 </nav>
               </div>
-            </header>
-            <div class="author">
-              <div class="author__container">
-                <form class="form" action="#" method="get" enctype="multipart/form-data">
-                  <h1 class="form__title">АВТОРИЗИРУЙТЕСЬ</h1>
-                  <div class="form__block-input">
-                    <div class="form__pic"><i class="fa fa-user" aria-hidden="true"></i></div>
-                    <input class="form__input form__input--login input" type="text" placeholder="Логин">
-                  </div>
-                  <div class="form__block-input">
-                    <div class="form__pic"><i class="fa fa-key" aria-hidden="true"></i></div>
-                    <input class="form__input form__input--pass input" type="password" placeholder="Пароль">
-                  </div>
-                  <div class="form__block-text">
-                    <label class="label form__label">
-                      <input class="check-hide form__check-hide" type="checkbox">
-                      <div class="check form__check">
-                        <div class="form__check-icon"></div>
-                      </div><span class="form__text">Я человек</span>
-                    </label>
-                    <div class="form__question">Вы точно не робот?</div>
-                    <div class="form__answer">
-                      <label class="label form__label form__label--yes">
-                        <input class="radio-hide form__radio-hide" type="radio" name="human" value="sure" checked="">
-                        <div class="radio form__radio form__radio--yes">
-                          <div class="form__radio-icon"></div>
-                        </div><span class="form__text">Да</span>
-                      </label>
-                      <label class="label form__label form__label--no">
-                        <input class="radio-hide form__radio-hide" type="radio" name="human" value="notsure">
-                        <div class="radio form__radio form__radio--no">
-                          <div class="form__radio-icon"></div>
-                        </div><span class="form__text">Не уверен</span>
-                      </label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item"><a class="nav__link" href="index.html">На главную</a></li>
-                  <li class="nav__item"><a class="nav__link" href="about.html">Войти</a></li>
-                </ul>
-              </nav>
             </div>
           </div>
         </div>

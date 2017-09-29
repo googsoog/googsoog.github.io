@@ -2,15 +2,25 @@
     top: 35%;
 }
 
+.hero-works {
+    min-height: 890px;
+}
+
+.hero-container {
+    min-height: 650px;
+    height: 100vh;
+    width: 100%;
+}
+
 .work-scroll {
-    bottom: 210px;
+    bottom: 245px;
     left: 50%;
 }
 
 .works {
     display: flex;
     flex-flow: column;
-    min-height: 1090px;
+    min-height: 750px;
     position: relative;
 }
 
@@ -32,6 +42,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $white;
+    .block-title:after {
+        display: none;
+    }
+}
+
+.works-title .block-title:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 262px;
+    height: 170px;
+    background-color: transparent;
+    background-image: url(../img/stars2.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .works__content {
@@ -51,65 +79,165 @@
     background-color: #f2f0e8;
 }
 
+.works__left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 240px
+}
+
+.works__subtitle {
+    margin-bottom: 25px;
+}
+
+.works__text {
+    margin-bottom: 55px;
+    color: #083c96;
+}
+
+.works__button {
+    padding: 13px 20px;
+    line-height: 1;
+    background-color: #004cd1;
+    color: $white;
+    font-family: $medium;
+    height: 45px;
+}
+
+.works__button-link {
+    display: block;
+    & .fa {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+}
+
+.works__link-text {
+    vertical-align: middle;
+}
+
 //right
 .works__right {
     width: 50%;
     background-color: #e3e2de;
 }
 
-.works__right-container {
-    overflow: hidden;
+.sleder {
+    //overflow: hidden;
     height: 100%;
 }
 
-.works__list {
-    height: 100%;
+.sleder__top {
+    width: 100%;
+    height: 73%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column;
 }
 
-.works__item {
-    height: 30%;
-    flex: 1 1 50%;
-}
-
-.works__item--big {
-    flex: 1 1 100%;
-    height: 70%;
-}
-
-.works__link {
+.sleder__bottom {
+    width: 100%;
+    height: 27%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
 }
 
-.works__img {
+.sleder__bg {
+    background-image: url(../img/work-1.png);
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 410px;
-    width: 360px;
+    height: 80%;
+    width: 42%;
 }
 
-.works__img--loftscool {
+.slider__link {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.sleder__left,
+.slider__right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 5px;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #aaabb7;
+        opacity: 0.7;
+    }
+}
+
+.slider__right:after {
+    background-color: #7e7f8a;
+}
+
+.sleder__right-container,
+.sleder__left-container {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+}
+
+.sleder__list {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 225px;
+}
+
+.slider__item {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.slider__item--loftscool {
     background-image: url(../img/work-1.png);
 }
 
-.works__img--yoga {
+.slider__item--yoga {
     background-image: url(../img/work-2.png);
 }
 
-.works__img--it {
+.slider__item--it {
     background-image: url(../img/work-3.png);
 }
 
-.works__img--portal {
-    background-image: url(../img/work-4.jpg);
+.slider__item--portal {
+    background-image: url(../img/work-4.png);
+}
+
+.slider__scroll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.slider__scroll-icon {
+    width: 45px;
+    height: 30px;
+    fill: $white;
 }
 
 //contact-me 
@@ -304,7 +432,7 @@
 }
 
 .info__scroll {
-    bottom: 70px;
+    bottom: -17px;
     left: 50%;
 }
 

@@ -6,7 +6,8 @@ block variables
 block content
   .wrapper
     .maincontent
-      section.section.hero.header-bg
+      section.section.hero.hero-works
+        .hero-container
           .hero__socials
             include ../common/soc.pug
           .hero__title.head-star.head-work
@@ -30,27 +31,43 @@ block content
           .works__content
             .works__left
               .works__left-container
-                .block-subtitle.works__subtitle CАЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+                .block-subtitle.works__subtitle
+                  | CАЙТ ШКОЛЫ ОНЛАЙН
+                  br 
+                  | ОБРАЗОВАНИЯ
                 .works__text HTML , CSS, JAVASCRIPT
                 .works__button
                   a.works__button-link(href='#')
                     i(class="fa fa-link" aria-hidden="true")
                     span.works__link-text Посмотреть сайт
             .works__right
-              .works__right-container
-                .works__list
-                  .works__item.works__item--big
-                    a.works__link.works__link--active(href='#')
-                      .works__img.works__img--loftscool
-                  .works__item
-                    a.works__link(href='#')
-                      .works__img.works__img--yoga
-                  .works__item
-                    a.works__link(href='#')
-                      .works__img.works__img--it
-                  .works__item
-                    a.works__link(href='#')
-                      .works__img.works__img--portal
+              .sleder
+                .sleder__top
+                  .sleder__bg
+                    a.slider__link(href='#')
+                .sleder__bottom
+                  .sleder__left
+                    .sleder__left-container
+                      ul.sleder__list
+                        li.slider__item.slider__item--loftscool
+                        li.slider__item.slider__item--yoga
+                        li.slider__item.slider__item--it
+                        li.slider__item.slider__item--portal
+                    .slider__scroll
+                      a.slider__scroll-link(href="#")
+                        svg.slider__scroll-icon
+                          use(xlink:href="assets/img/sprite.svg#portf_arrow_down")
+                  .slider__right
+                    .sleder__right-container
+                      ul.sleder__list
+                        li.slider__item.slider__item--portal
+                        li.slider__item.slider__item--it
+                        li.slider__item.slider__item--yoga
+                        li.slider__item.slider__item--loftscool
+                    .slider__scroll
+                      a.slider__scroll-link(href="#")
+                        svg.slider__scroll-icon
+                          use(xlink:href="assets/img/sprite.svg#portf_arrow_up")
       section.section.contact-me
         .info
           .info__container
